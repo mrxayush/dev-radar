@@ -130,7 +130,7 @@ function App() {
     if (isAuthenticated && !scoutedProfile && !scoutLoading) {
       handleScoutSearch('torvalds');
     }
-  }, [isAuthenticated]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isAuthenticated, scoutedProfile, scoutLoading]);
 
   if (!isAuthenticated) {
     return <Login onLoginSuccess={checkAuth} />;
