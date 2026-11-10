@@ -3,7 +3,7 @@ import axios from 'axios';
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL ||
   (typeof window !== 'undefined' && window.location.hostname === 'localhost'
     ? 'http://localhost:8080/api'
-    : '/api');
+    : 'https://backend-fragrant-petal-403.fly.dev/api');
 
 const api = axios.create({
   baseURL: API_BASE_URL,
